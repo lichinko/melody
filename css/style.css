@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("BebasNeueRegular"),
+    url("../fonts/BebasNeueRegular.woff2") format("woff2"),
+    url("../fonts/BebasNeueRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box; /*правило для всех элементов - оно позволяет правильно считать ширину и высоту элементов*/
 }
@@ -48,4 +58,63 @@ body {
   font-size: 17px; /*размер шрифта*/
   line-height: 20px; /*междустрочный интервал*/
   text-decoration: none; /*убираем форматирование текста*/
+}
+.main {
+  max-width: 1280px; /*выставили максимальную ширину вебстраницы*/
+  margin: auto; /*вебстраница центруется на мониторе*/
+  padding-top: 54px; /*выставили отступ у шапки сверху*/
+  display: flex; /*сделали блок гибким*/
+}
+.main-info {
+  flex-grow: 1;
+  text-align: center; /*текст выравнивается по центру*/
+  display: flex; /*сделали блок гибким*/
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /*отцентровали текст*/
+}
+.home-image path {
+  opacity: 0;
+  cursor: pointer;
+}
+.home-image path:hover {
+  opacity: 1;
+}
+.counter-group {
+  display: flex; /*сделали блок гибким*/
+  flex-direction: column;
+  align-items: center; /*отцентровали текст*/
+  padding-top: 60px; /*выставили отступ у шапки сверху*/
+  padding-bottom: 60px; /*выставили отступ у шапки снизу*/
+}
+.counter-button {
+  background-color: #fff; /*выставили цвет подложки*/
+  border: none; /*обводку - убираем*/
+  cursor: pointer;
+}
+.counter-arrow-down {
+  transform: rotateX(180deg); /*выставили цвет подложки*/
+}
+.main-title {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 37px;
+  line-height: 44px;
+  color: #635854;
+  align-items: center; /*отцентровали текст*/
+}
+.counter {
+  color: #635854;
+  font-size: 124px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: normal;
+}
+.button-primary {
+  background: #3596f5;
+  border-radius: 6px;
+  color: #fff;
+  border: none; /*обводку - убираем*/
+  padding: 16px 36px;
+  cursor: pointer;
 }
